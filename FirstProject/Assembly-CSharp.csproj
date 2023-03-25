@@ -59,6 +59,9 @@
     <Compile Include="Assets\Scripts\MainScript.cs" />
     <Compile Include="Assets\Scripts\Player\MovePlayer.cs" />
     <Compile Include="Assets\Scripts\Player\MainPlayer.cs" />
+    <Compile Include="Assets\Scripts\Level\SpavnEnemy.cs" />
+    <Compile Include="Assets\Scripts\Level\DataLevel.cs" />
+    <Compile Include="Assets\Scripts\Level\Flag.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
