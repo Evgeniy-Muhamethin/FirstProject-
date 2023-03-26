@@ -1,22 +1,19 @@
-using Assets.Scripts.Level;
 using UnityEngine;
 
 public class SpavnEnemy : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _enemyObjectSpavn;
+    private GameObject[] _enemyObjectSpavn;
+
+	private ActionsSpavnEnemy _actionSpavn;
+
+	private void Start()
+	{
+		_actionSpavn = new ActionsSpavnEnemy();
+	}
 
 	private void FixedUpdate()
 	{
-		int count = 1000;
-		while (count > 0)
-		{
-			count --;
-		}
-
-		if (count == 0)
-		{
-			Instantiate(_enemyObjectSpavn);
-		}
+		_actionSpavn.ActiveEnemyObject(_enemyObjectSpavn);
 	}
 }
