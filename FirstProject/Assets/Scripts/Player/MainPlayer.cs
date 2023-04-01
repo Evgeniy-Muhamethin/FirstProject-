@@ -10,6 +10,8 @@ public class MainPlayer : MonoBehaviour
 	private Rigidbody _rigidbody;
 	[SerializeField]
 	private float _speed;
+	[SerializeField]
+	private float _seedRotations;
 
 	private KeyCode[] _keyCode;
 
@@ -25,7 +27,8 @@ public class MainPlayer : MonoBehaviour
 	private void Update()
 	{
 		movePlayer.MovePlayerMethod(
-			_rigidbody, _speed, _keyCode[0], _keyCode[1],
+			_rigidbody, _speed, _seedRotations, 
+			_keyCode[0], _keyCode[1],
 			_keyCode[2], _keyCode[3]);
 	}
 }

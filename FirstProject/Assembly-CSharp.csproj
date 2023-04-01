@@ -56,12 +56,12 @@
     <Analyzer Include="D:\Programms\VisualStudio2022\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Enemy\ActyveAndEnableEnemy.cs" />
     <Compile Include="Assets\Scripts\Level\SpavnEnemy.cs" />
+    <Compile Include="Assets\Scripts\Level\ActionsSpavnEnemy.cs" />
     <Compile Include="Assets\Scripts\MainScript.cs" />
     <Compile Include="Assets\Scripts\Player\MovePlayer.cs" />
     <Compile Include="Assets\Scripts\Player\MainPlayer.cs" />
-    <Compile Include="Assets\Scripts\Enemy\ActyveAndEnableEnemy.cs" />
-    <Compile Include="Assets\Scripts\Level\ActionsSpavnEnemy.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

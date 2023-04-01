@@ -261,7 +261,6 @@ MonoBehaviour:
   - {fileID: 368459430}
   - {fileID: 109088786}
   - {fileID: 1055138082}
-  _enemyIndex: 5
 --- !u!1001 &368459429
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -502,6 +501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 559814726}
   _speed: 10
+  _seedRotations: 100
 --- !u!54 &559814726
 Rigidbody:
   m_ObjectHideFlags: 0
