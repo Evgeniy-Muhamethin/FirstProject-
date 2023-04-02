@@ -9,4 +9,20 @@ public class ActionsTurell
         Quaternion rotations = Quaternion.LookRotation(relativePosition);
         transformTurell.rotation = rotations;
     }
+
+    public float DistanceObject(Transform objectOne, 
+        Transform objectTwo)
+    {
+        float distanceResult = 0;
+        distanceResult = Mathf.Sqrt((objectOne.position - 
+            objectTwo.position).sqrMagnitude);
+        return distanceResult;
+    }
+
+    public GameObject Gun(GameObject gameObject)
+    {
+        GameObject result;
+        result = MonoBehaviour.Instantiate(gameObject);
+        return result;
+    }
 }

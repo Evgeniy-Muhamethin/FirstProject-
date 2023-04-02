@@ -10,6 +10,10 @@ public class MainTurell : MonoBehaviour
 	private Transform _towerTurell;
 	[SerializeField]
 	private Transform _player;
+	[SerializeField]
+	private GameObject _bullet;
+
+	private float _minDistance = 3;
 
 	private void Start()
 	{
@@ -18,9 +22,19 @@ public class MainTurell : MonoBehaviour
 
 	private void Update()
 	{
-		actionsTurell.ObjectLookRotation(
-			_towerTurell, _player);
-		Debug.DrawLine(_towerTurell.position, _player.position,
-			Color.blue);
+		float distanceResult = 
+			actionsTurell.DistanceObject(_towerTurell, _player);
+		
+		if (distanceResult < _minDistance)
+		{
+			actionsTurell.ObjectLookRotation(
+				_towerTurell, _player);
+			Debug.DrawLine(_towerTurell.position, _player.position,
+				Color.blue);
+		}
+
+		//Turell
+		GameObject bulletObject = actionsTurell.Gun(_bullet);
+		bulletObject.transform.position = _towerTurell.position;
 	}
 }

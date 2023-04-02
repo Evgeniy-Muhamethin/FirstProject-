@@ -143,8 +143,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cb11a687e947d6409f6ddf84de7c014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _towerTurell: {fileID: 0}
+  _towerTurell: {fileID: 2465881462764562950}
   _player: {fileID: 0}
+  _bullet: {fileID: 0}
 --- !u!1 &2465881462764562949
 GameObject:
   m_ObjectHideFlags: 0
