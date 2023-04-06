@@ -18,11 +18,4 @@ public class ActionsTurell
             objectTwo.position).sqrMagnitude);
         return distanceResult;
     }
-
-    public GameObject Gun(GameObject gameObject)
-    {
-        GameObject result;
-        result = MonoBehaviour.Instantiate(gameObject);
-        return result;
-    }
 }
