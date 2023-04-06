@@ -15,6 +15,11 @@ public class MainTurell : MonoBehaviour
 
 	private float _minDistance = 3;
 
+	private void Awake()
+	{
+		_player = GameObject.FindGameObjectWithTag("Player").transform;
+	}
+
 	private void Start()
 	{
 		actionsTurell = new ActionsTurell();
@@ -31,7 +36,6 @@ public class MainTurell : MonoBehaviour
 				_towerTurell, _player);
 			Debug.DrawLine(_towerTurell.position, _player.position,
 				Color.blue);
-
 		}
 	}
 }
