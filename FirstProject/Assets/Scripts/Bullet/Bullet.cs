@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Build.Content;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -12,9 +13,16 @@ public class Bullet : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
+		bool flagFalse;
+
 		if (other.CompareTag("Player"))
+			flagFalse = false;
+		else
+			flagFalse = true;
+
+		if (flagFalse == false)
 		{
-			Destroy(gameObject);
+			gameObject.SetActive(false);
 		}
 	}
 }

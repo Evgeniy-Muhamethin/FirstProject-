@@ -31,10 +31,7 @@ public class MainTurell : MonoBehaviour
 				_towerTurell, _player);
 			Debug.DrawLine(_towerTurell.position, _player.position,
 				Color.blue);
-		}
 
-		//Turell
-		GameObject bulletObject = actionsTurell.Gun(_bullet);
-		bulletObject.transform.position = _towerTurell.position;
+		}
 	}
 }

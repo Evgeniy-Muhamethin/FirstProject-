@@ -62,9 +62,11 @@
     <Compile Include="Assets\Scripts\Enemy\Turell\MainTurell.cs" />
     <Compile Include="Assets\Scripts\Level\ActionsSpavnEnemy.cs" />
     <Compile Include="Assets\Scripts\MainScript.cs" />
+    <Compile Include="Assets\Scripts\Bullet\Bullet.cs" />
     <Compile Include="Assets\Scripts\Player\MovePlayer.cs" />
     <Compile Include="Assets\Scripts\Player\MainPlayer.cs" />
-    <Compile Include="Assets\Scripts\Bullet\Bullet.cs" />
+    <Compile Include="Assets\Scripts\TestScene\BulletTest.cs" />
+    <Compile Include="Assets\Scripts\TestScene\WallsTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

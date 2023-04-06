@@ -659,7 +659,7 @@ PrefabInstance:
     - target: {fileID: 7609698425341724685, guid: 8c0203f04acefbe4eb66ced5718310d7, type: 3}
       propertyPath: _bullet
       value: 
-      objectReference: {fileID: 5698682067312510643, guid: 732b5932ff5d2864bb0cb7eaadafe739, type: 3}
+      objectReference: {fileID: 1018016216}
     - target: {fileID: 7609698425341724685, guid: 8c0203f04acefbe4eb66ced5718310d7, type: 3}
       propertyPath: _player
       value: 
@@ -1024,6 +1024,11 @@ GameObject:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8278926747431162143, guid: 9146c90673e4528449f90c730731ac9c, type: 3}
   m_PrefabInstance: {fileID: 1012645314}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1018016216 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8314036639092798751, guid: 8c0203f04acefbe4eb66ced5718310d7, type: 3}
+  m_PrefabInstance: {fileID: 616112362}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1055138081
 PrefabInstance:
