@@ -4,14 +4,9 @@ public class MainBombs : MonoBehaviour
 {
     private ActionBombs _actionBombs;
 
-    void Start()
+	void Start()
     {
         _actionBombs = new ActionBombs();
-    }
-
-    void Update()
-    {
-        
     }
 
 	private void OnTriggerEnter(Collider other)
