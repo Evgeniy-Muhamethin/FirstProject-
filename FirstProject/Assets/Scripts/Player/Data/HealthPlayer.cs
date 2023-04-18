@@ -3,7 +3,7 @@ using UnityEngine;
 
 public struct HealthPlayer
 {
-    private int health;
+    private static int health;
 
     public int Health
     {

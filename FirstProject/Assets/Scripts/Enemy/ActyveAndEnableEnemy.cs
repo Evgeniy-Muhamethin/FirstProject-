@@ -25,9 +25,7 @@ public class ActyveAndEnableEnemy : MonoBehaviour
 		if (other.CompareTag("Player"))
 		{
 			gameObject.SetActive(false);
-			_healthPlayer.Health--; //Наносим урон игроку 
-
-			print($"{_healthPlayer.Health}");
+			_healthPlayer.Health--;
 		}
 	}
 

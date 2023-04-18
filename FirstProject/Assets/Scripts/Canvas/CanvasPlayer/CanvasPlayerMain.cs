@@ -8,8 +8,6 @@ public class CanvasPlayerMain : MonoBehaviour
 
     private HealthPlayer _healthPlayer;
 
-	//TODO не считывает новые и измененные
-	//данные с —“–” “”–џ ƒјЌЌџ’ (HealthPlayer)
 	private void Update()
 	{
 		string printHealth = $"{_healthPlayer.Health}";
