@@ -14,10 +14,30 @@ public class ActyveAndEnableEnemy : MonoBehaviour
 	{
 		_player = GameObject.FindGameObjectWithTag("Player").transform;
 	}
-
+	
+	//RaycastHit Очень интересно работать с этими возможностями.
+	//Расширяет возможности для разработки.
+	RaycastHit hit;
 	private void Update()
 	{
 		NavMeshEnemy(_agent, _player);
+
+		//TODO Вынести в отдельный метод 
+		#region Phusics Raycast and RaycastHit проверка возможностей работы 
+		var directions = _player.position - gameObject.transform.position; //Для корректной работы расчитал расстояние от стартовой точки до конейной точки
+		var startPosition = gameObject.transform.position;
+		var resultPhysics = Physics.Raycast(startPosition, directions, out hit, 15);
+
+		Color color = Color.red;
+		if (resultPhysics)
+		{
+			if (hit.collider.gameObject.CompareTag("Player"))
+			{
+				color = Color.green;
+			}
+		}
+		Debug.DrawRay(startPosition, directions, color);
+		#endregion
 	}
 
 	private void OnTriggerEnter(Collider other)
