@@ -7,9 +7,11 @@ public class Bullet : MonoBehaviour
 	private Transform _returnPosition;
 
 	private ActionsTurell _actionsTurell;
+	private HealthPlayer _healthPlayer;
 
 	private float _distance;
 	private float _maxDistance = 5;
+	private int _damage = 5;
 
 	private void Start()
 	{
@@ -36,6 +38,7 @@ public class Bullet : MonoBehaviour
 			| other.CompareTag("Plane"))
 		{
 			ReturObjectPositions();
+			_healthPlayer.Health -= _damage;
 		}
 	}
 
