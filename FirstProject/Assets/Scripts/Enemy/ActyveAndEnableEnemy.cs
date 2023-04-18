@@ -8,6 +8,8 @@ public class ActyveAndEnableEnemy : MonoBehaviour
 	[SerializeField]
 	private NavMeshAgent _agent;
 
+	HealthPlayer _healthPlayer;
+
 	private void Awake()
 	{
 		_player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -23,7 +25,9 @@ public class ActyveAndEnableEnemy : MonoBehaviour
 		if (other.CompareTag("Player"))
 		{
 			gameObject.SetActive(false);
-			print("Object was connected");
+			_healthPlayer.Health--; //Наносим урон игроку 
+
+			print($"{_healthPlayer.Health}");
 		}
 	}
 
