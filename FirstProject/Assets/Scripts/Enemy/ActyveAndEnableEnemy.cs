@@ -8,36 +8,29 @@ public class ActyveAndEnableEnemy : MonoBehaviour
 	[SerializeField]
 	private NavMeshAgent _agent;
 
-	HealthPlayer _healthPlayer;
+	private HealthPlayer _healthPlayer;
+	private ActionsTurell _actionsTurell;
 
 	private void Awake()
 	{
 		_player = GameObject.FindGameObjectWithTag("Player").transform;
 	}
-	
+
+	private void Start()
+	{
+		_actionsTurell = new ActionsTurell();
+	}
+
 	//RaycastHit Очень интересно работать с этими возможностями.
 	//Расширяет возможности для разработки.
-	RaycastHit hit;
+	private RaycastHit hit;
+	private float distationRaycast = 15;
 	private void Update()
 	{
 		NavMeshEnemy(_agent, _player);
 
-		//TODO Вынести в отдельный метод 
-		#region Phusics Raycast and RaycastHit проверка возможностей работы 
-		var directions = _player.position - gameObject.transform.position; //Для корректной работы расчитал расстояние от стартовой точки до конейной точки
-		var startPosition = gameObject.transform.position;
-		var resultPhysics = Physics.Raycast(startPosition, directions, out hit, 15);
-
-		Color color = Color.red;
-		if (resultPhysics)
-		{
-			if (hit.collider.gameObject.CompareTag("Player"))
-			{
-				color = Color.green;
-			}
-		}
-		Debug.DrawRay(startPosition, directions, color);
-		#endregion
+		_actionsTurell.TrigerOnPlayer(gameObject,
+			_player, hit, distationRaycast);
 	}
 
 	private void OnTriggerEnter(Collider other)

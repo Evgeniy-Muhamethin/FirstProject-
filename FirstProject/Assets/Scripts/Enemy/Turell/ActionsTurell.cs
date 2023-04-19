@@ -19,4 +19,25 @@ public class ActionsTurell
             objectTwo.position).sqrMagnitude);
         return distanceResult;
     }
+
+    //Реакция на игрока
+    public void TrigerOnPlayer(GameObject startPoint, Transform endPoint,
+        RaycastHit hit, float duration)
+    {
+        var directions = endPoint.transform.position 
+            - startPoint.transform.position;//Для корректной работы расчитал расстояние от стартовой точки до конейной точки
+		var startPosition = startPoint.transform.position;
+        var resultRaycast = Physics.Raycast(startPosition, directions, out hit,
+            duration);
+
+        Color color = Color.red;
+        if (resultRaycast)
+        {
+            if (hit.collider.gameObject.CompareTag("Player"))
+            {
+                color = Color.green;
+            }
+        }
+        Debug.DrawRay(startPosition, directions, color);
+    }
 }

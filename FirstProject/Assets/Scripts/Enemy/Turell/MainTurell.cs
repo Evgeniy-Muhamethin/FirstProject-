@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MainTurell : MonoBehaviour
 {
-    private ActionsTurell actionsTurell;
+    private ActionsTurell _actionsTurell;
 
 	[SerializeField]
 	private Transform _towerTurell;
@@ -22,20 +22,23 @@ public class MainTurell : MonoBehaviour
 
 	private void Start()
 	{
-		actionsTurell = new ActionsTurell();
+		_actionsTurell = new ActionsTurell();
 	}
+
+	private RaycastHit _hit;
+	private float _duration = 15;
 
 	private void Update()
 	{
 		float distanceResult = 
-			actionsTurell.DistanceObject(_towerTurell, _player);
+			_actionsTurell.DistanceObject(_towerTurell, _player);
 		
 		if (distanceResult < _minDistance)
 		{
-			actionsTurell.ObjectLookRotation(
+			_actionsTurell.ObjectLookRotation(
 				_towerTurell, _player);
-			Debug.DrawLine(_towerTurell.position, _player.position,
-				Color.blue);
 		}
+		_actionsTurell.TrigerOnPlayer(gameObject, _player, _hit, 
+			_duration);
 	}
 }
