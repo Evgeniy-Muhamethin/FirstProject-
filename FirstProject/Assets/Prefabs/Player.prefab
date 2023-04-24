@@ -30,7 +30,8 @@ Transform:
   m_LocalPosition: {x: -0.031, y: 0.03, z: 0.6}
   m_LocalScale: {x: 0.1, y: 0.2, z: 0.1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 200952867047684737}
   m_Father: {fileID: 7666966302314778207}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -229,3 +230,36 @@ MonoBehaviour:
   _rigidbody: {fileID: 7666966302314778205}
   _speed: 10
   _seedRotations: 100
+  _pointSpawnObject: {fileID: 200952867047684737}
+  _spawnObject: {fileID: 3786348999383146143, guid: 7d8b11c5899dd704a85db690e0b92887, type: 3}
+--- !u!1 &8788516586746811940
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 200952867047684737}
+  m_Layer: 0
+  m_Name: PointSpawnBullet(GUN)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &200952867047684737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8788516586746811940}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.9, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 47208994697597457}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
