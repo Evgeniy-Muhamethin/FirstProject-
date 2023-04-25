@@ -7,7 +7,7 @@ public class Gun
         GameObject spawnObject)
     {
         return MonoBehaviour.Instantiate(spawnObject, 
-            pointSpawnObject.position, Quaternion.identity);
+            pointSpawnObject.position, pointSpawnObject.transform.rotation);
     }
 
     public void ButtonGun(KeyCode button, Transform pointSpawnObject,
@@ -15,7 +15,7 @@ public class Gun
     {
         if (Input.GetKey(button))
         {
-            GameObject objectSpawn = SpawnBullet(pointSpawnObject, spawnObject);
+            SpawnBullet(pointSpawnObject, spawnObject);
 		}
     }
 }
