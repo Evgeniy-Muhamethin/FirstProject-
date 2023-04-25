@@ -6,7 +6,6 @@ public class ActionCamera
     public void Transform(Transform cameraTransform, 
         Transform playerTransform)
     {
-        //TODO ”становить смещение камеры в сторону движени€ игрока 
-        cameraTransform.transform.position = new Vector3(0,7,1);
-	}
+        //TODO Ќастроить простое смещение камеры 
+    }
 }
