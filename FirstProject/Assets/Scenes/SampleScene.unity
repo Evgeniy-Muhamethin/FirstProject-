@@ -178,6 +178,7 @@ MonoBehaviour:
   - {fileID: 368459430}
   - {fileID: 1814981237}
   - {fileID: 432751203}
+  _spawnPoint: []
 --- !u!1001 &368459429
 PrefabInstance:
   m_ObjectHideFlags: 0

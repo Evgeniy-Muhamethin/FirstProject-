@@ -9,7 +9,7 @@ public class ActionsTurell
         Vector3 relativePosition = transformPlayer.position - transformTurell.position;
         Quaternion rotations = Quaternion.LookRotation(relativePosition);
         transformTurell.rotation = rotations;
-    }
+    }//устарел как метод, Лучше использовать RayCast
 
     public float DistanceObject(Transform objectOne, 
         Transform objectTwo)

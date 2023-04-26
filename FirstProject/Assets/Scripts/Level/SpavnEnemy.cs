@@ -4,6 +4,8 @@ public class SpavnEnemy : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] _enemyObjectSpavn;
+    [SerializeField]
+    private GameObject[] _spawnPoint;
 
 	private ActionsSpavnEnemy _actionSpavn;
 
@@ -14,6 +16,6 @@ public class SpavnEnemy : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		_actionSpavn.ActiveEnemyObject(_enemyObjectSpavn);
+		
 	}
 }

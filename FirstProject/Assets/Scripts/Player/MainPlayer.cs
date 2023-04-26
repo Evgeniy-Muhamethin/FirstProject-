@@ -39,7 +39,6 @@ public class MainPlayer : MonoBehaviour
 		_healthPlayer.Health = _health;
 	}
 
-
 	private void Update()
 	{
 		movePlayer.MovePlayerMethod(
