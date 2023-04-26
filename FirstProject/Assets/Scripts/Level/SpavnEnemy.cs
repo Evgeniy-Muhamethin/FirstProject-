@@ -14,6 +14,6 @@ public class SpavnEnemy : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		_actionSpavn.ActiveEnemyObject(_enemyObjectSpavn);
+		
 	}
 }

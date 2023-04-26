@@ -1,16 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ActionsSpavnEnemy 
 {
-    public void ActiveEnemyObject(GameObject[] enemyObjectActive)
+    //TODO Добавить канвас и отображение жизней врага
+
+    public void Spawn(GameObject gameObjects, 
+        GameObject spawnPoint)
     {
-		foreach (GameObject elements in enemyObjectActive)
-		{
-			//TODO Добавить включение объекта
-			//через определенное время 
-			elements.SetActive(true);
-		}
-	}
+        gameObjects.SetActive(true);
+        spawnPoint.transform.position = gameObjects.transform.position;
+    }
 }
