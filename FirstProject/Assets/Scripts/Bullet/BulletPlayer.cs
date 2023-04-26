@@ -4,6 +4,8 @@ public class BulletPlayer : MonoBehaviour
 {
 	private float _speedBullet = 2f;
 
+	private DataEnemy _dataEnemy;
+
 	private void Update()
 	{
 		gameObject.transform.Translate(Vector3.forward * _speedBullet
@@ -15,6 +17,7 @@ public class BulletPlayer : MonoBehaviour
 		if (other.CompareTag("Enemy") | other.CompareTag("Walls"))
 		{
 			Destroy(gameObject);
+			_dataEnemy.Health--;
 		}
 	}
 }
